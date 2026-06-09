@@ -50,12 +50,7 @@ Situation ──repeated──→ pattern ──abstract──→            ↗
 
 ## 通用类型问题
 
-四个 crate 都用到小型标签类型（Label / Level / Priority / Trigger / Risk）。选项：
-
-A. 每个 crate 自包含，重复定义 → 简单，无共享依赖成本
-B. 抽出 `qtcloud-think-types` 作为第五个 crate → 干净，但多了个 crate
-
-当前倾向 A（等有代码后再评估是否抽取）。
+四个 crate 没有共享的自定义类型。`Agent` 仅 Intention 使用，`Entity` / `Causal` 等仅 Schema 使用，`DateTime` / `Uuid` 来自外部依赖。**不加 core crate**。
 
 ## 序列化格式
 
