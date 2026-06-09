@@ -27,9 +27,9 @@ apps/qtcloud-think/
 | 类型 | 本质 | 来源 | 粒度 |
 |------|------|------|------|
 | Thought | 原始输入的文本，带模糊标签 | 用户 stdin | 单条 |
-| Situation | 环境表征：发生了什么 | thought → clarify | 按领域聚合 |
-| Intention | 目标表征：想要达成什么 | thought → clarify | 按 situation 归属 |
-| Schema | 模式表征：认知规律 | thought → clarify + 跨情境沉淀 | 按 situation 归属 |
+| Intention | 目标表征：想要达成什么 | thought → clarify（从想法中提取） | 单条，可跨 situation |
+| Situation | 环境表征：发生了什么 | intention + thought 聚类产生 | 按意图和想法聚类 |
+| Schema | 模式表征：认知规律 | situation 聚类产生 | 跨 situation 沉淀 |
 
 ## 通用类型问题
 
