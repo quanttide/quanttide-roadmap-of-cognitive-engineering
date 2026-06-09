@@ -9,17 +9,18 @@ Intention（意图）是认知构件之一，属于**固体域**——从 galler
 ```
 Intention {
     id: Uuid,
-    title: String,          // 标题
-    description: String,    // 描述
-    motivation: String,     // 动因
-    agent: Label,           // agent: founder / founder_ai / ...
-    level: Level,           // top / middle / bottom
-    priority: Priority,     // high / medium / low
-    trigger: Trigger,       // persistent / conditional
-    risk: Risk,             // high / medium / low
+    title: String,
+    description: String,
+    motivation: String,
+    agent: Agent,
+    level: Level,
+    priority: Priority,
+    trigger: Trigger,
+    risk: Risk,
 }
 
-Label { name: String, label: String }
+Agent { name: String, label: String }
+
 Level { name: String, label: String, description: String }
 Priority { name: String, label: String, description: String }
 Trigger { name: String, label: String, description: String }
