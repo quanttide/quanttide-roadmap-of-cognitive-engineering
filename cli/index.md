@@ -31,6 +31,23 @@ apps/qtcloud-think/
 | Situation | 环境表征：发生了什么 | intention + thought 聚类产生 | 按意图和想法聚类 |
 | Schema | 模式表征：认知规律 | situation 聚类产生 | 跨 situation 沉淀 |
 
+## 构件关系
+
+```
+Thought ──clarify──→ Intention
+                          \
+Thought ──clarify──→ Intention ──cluster──→ Situation
+Thought ──clarify──→ Intention                          ↘
+...                                                    Schema
+Situation ──repeated──→ pattern ──abstract──→            ↗
+```
+
+- **Thought → Intention**：clarify 阶段从原始想法中提取意图。Intention 是 Thought 最直接的产物
+- **Thought + Intention → Situation**：多条 thought 和 intention 指向同一个认知域时聚类为一个 situation
+- **Situation → Situation**：situation 之间存在关系（支持/冲突/触发/演化等），由 later analyze 计算
+- **Situation → Schema**：跨多个 situation 重复出现的模式抽象为 schema。共享 entities / causals / boundaries 的共同模式沉淀为 schema
+- **Schema ⇄ Intention**：schema 的 mappings 字段记录 intent→action 映射，是 intention 的模式化总结
+
 ## 通用类型问题
 
 四个 crate 都用到小型标签类型（Label / Level / Priority / Trigger / Risk）。选项：

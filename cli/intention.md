@@ -26,12 +26,6 @@ Trigger { name: String, label: String, description: String }
 Risk { name: String, label: String, description: String }
 ```
 
-## 与其他构件的关系
-
-- **Thought** → **Intention**：一条想法经过 clarify 可能产出一条 intention（"我想要…"）。Intention 是 Thought 最直接的产物，提取速度快
-- **Intention** → **Situation**：多条 intention 聚类形成 situation，不是 intention 属于 situation，而是 intention 是 situation 的构建材料
-- **Schema** ⇄ **Intention**：schema 的 mappings 字段记录 intent→action 映射，与 intention 双向关联
-
 ## CLI 中的角色
 
 作为独立 crate，提供 Intention 类型的序列化/反序列化和基础查询。不包含分析逻辑（分析在 CLI 命令中）。
